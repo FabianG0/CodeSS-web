@@ -6,16 +6,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Codeseeds Solutions</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        .navbar-fixed {
+          position: fixed;
+          top: -100px;
+          width: 100%;
+          transition: top 0.3s;
+        }
+    
+        .navbar-show {
+          top: 0;
+        }
+      </style>
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+      <script>
+        $(document).ready(function() {
+          var scrollPosition = 50; // Define la posición de desplazamiento donde el navbar aparecerá
+    
+          $(window).scroll(function() {
+            var currentPosition = $(this).scrollTop();
+            
+            if (currentPosition > scrollPosition) {
+              $("#navbarFixed").addClass("navbar-show");
+            } else {
+              $("#navbarFixed").removeClass("navbar-show");
+            }
+          });
+        });
+      </script>
 </head>
-<body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary p-0">
-        <div class="container-fluid p-3 bg-black">
+<body >
+    <div class="bg-black flex-row" style="height:20px; background: ;">
+    </div>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light p-0   ">
+        <div class="container-fluid p-4  bg-black">
             <a class="navbar-brand text-white" href="#">
                 <img src="img/logo.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
-                Codeseeds Solutions
+                CodeSeeds Solutions
               </a>
-              <button class="navbar-toggler bg-white    " type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+              <button class="navbar-toggler bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" 
+              aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon "></span>
               </button>
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ">
@@ -32,6 +65,53 @@
           </div>
         </div>
       </nav>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-fixed p-0" id="navbarFixed">
+        <div class="container-fluid p-4  bg-black">
+            <a class="navbar-brand text-white" href="#">
+                <img src="img/logo.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+                CodeSeeds Solutions
+              </a>
+              <button class="navbar-toggler bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" 
+              aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon "></span>
+              </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ">
+              <li class="nav-item">
+                <a class="nav-link text-white" aria-current="page" href="#">¿Quiénes somos?</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="#">Proyectos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="#">Contacto</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <div class="video pt-3 pb-5 content-center text-center">
+        <iframe width="854" height="480" src="https://www.youtube.com/embed/2c1wMSaxCt0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      </div>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ac cursus urna. Morbi ultrices lectus diam, sed porta ligula tempus at. Pellentesque aliquet orci sed lectus consectetur, eu ultrices ex vestibulum. Cras tempus purus vel porttitor ornare. Quisque id porttitor nunc, vestibulum mollis nisi. Morbi ullamcorper dignissim luctus. Etiam sodales varius convallis. Donec nec nibh sem. Pellentesque laoreet neque a massa consectetur, in efficitur leo efficitur. Aenean luctus metus nec nunc accumsan elementum. Maecenas egestas placerat augue, in aliquam velit sagittis ut. Phasellus non lorem at mi vehicula mollis nec id nunc. Vestibulum erat elit, dapibus vel tincidunt tristique, elementum vel tellus. Ut elementum dolor non nisl vulputate pulvinar. <br>
+
+Phasellus condimentum sodales vestibulum. Morbi consectetur neque risus, quis hendrerit nibh accumsan et. Nam mattis lorem turpis. Pellentesque tincidunt auctor mi ac feugiat. Nunc a dui imperdiet, pharetra nunc non, aliquet diam. Donec feugiat eros eget enim eleifend eleifend. Aliquam tincidunt, purus id ultricies molestie, mauris velit eleifend nisi, in cursus ex ante vitae sem. Nullam sagittis libero nisi, eu mollis dui mattis ut. Suspendisse euismod risus et lobortis scelerisque. Nullam malesuada sem nec ullamcorper commodo. Morbi sit amet semper felis. Cras in posuere erat. Donec maximus sed nisl sed ultricies. Pellentesque pulvinar eget odio ac euismod.<br>
+
+Vivamus tincidunt tortor a condimentum ornare. Quisque et augue sollicitudin, rhoncus mi faucibus, commodo elit. Nunc placerat mi eu vehicula varius. Vivamus gravida mattis neque, ut tincidunt lectus pretium et. Praesent suscipit aliquet metus, ac imperdiet enim tincidunt sit amet. Nullam pharetra odio justo. Proin faucibus vestibulum diam quis tristique. Curabitur lacus tellus, scelerisque nec tincidunt quis, condimentum eget magna. Vestibulum quis mattis tortor. Ut dolor lorem, egestas nec luctus ut, porttitor eu nisl. Nunc in ultricies eros. Quisque auctor posuere ultricies. Suspendisse faucibus cursus euismod.<br>
+<br>
+Phasellus faucibus diam quis nulla ultricies, vel elementum quam dictum. Vestibulum efficitur egestas velit, ut consequat justo varius nec. Nam sed sapien ullamcorper, sodales augue vel, placerat diam. Suspendisse rhoncus mi vel lectus vehicula volutpat. Morbi congue ac nisi eget faucibus. Praesent vel pellentesque odio, vel lobortis eros. Nulla facilisi. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam efficitur dui et placerat convallis. Vestibulum sed felis luctus, euismod massa et, ornare ex. Duis tristique, lectus eu tempus convallis, massa orci facilisis lacus, eu egestas sem risus elementum ante. Sed ultrices efficitur tellus, nec consequat tortor venenatis vitae.<br>
+<br>
+Suspendisse nec libero nec justo viverra tempus. Quisque nec pulvinar ligula. Aenean quis neque nunc. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam non congue tellus. Vestibulum nec elit ac erat vulputate feugiat. Nullam luctus odio et luctus tincidunt. Sed pulvinar posuere nisl, in congue velit tincidunt a. Proin a ullamcorper augue.<br>
+<br>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare tincidunt lacus, ac mollis dolor. Vestibulum egestas mi at sem bibendum lacinia. Nullam eleifend turpis ac sem molestie convallis. Aliquam erat volutpat. Integer sagittis massa tellus, quis commodo eros vehicula non. Nullam non accumsan augue. Suspendisse potenti. Quisque feugiat, tortor quis sagittis posuere, sem purus pharetra nunc, et suscipit felis lacus non metus. Mauris id bibendum ante, ut fringilla risus. Curabitur at efficitur libero. In quis mattis lectus, quis auctor est. Quisque dolor augue, sodales vitae fermentum in, congue sed erat. Nunc tincidunt id massa ut fermentum. Nullam id mattis risus, convallis scelerisque urna.<br>
+
+Donec finibus nunc et suscipit vestibulum. Maecenas non elit nibh. Sed felis urna, tempor placerat tristique sit amet, auctor lacinia ante. Aenean elementum tortor eget volutpat rutrum. Integer tincidunt tortor non sagittis porta. Ut facilisis gravida augue sit amet viverra. Duis consequat dapibus dapibus. Fusce rutrum purus dolor, pretium pharetra sem lacinia in. Morbi vestibulum facilisis orci eu tristique.
+
+Nullam ac lectus convallis, placerat mi et, auctor odio. Cras et tincidunt arcu, eget eleifend metus. Etiam eu pellentesque arcu. Ut eleifend dolor vel nulla volutpat, ac posuere nisl tempus. Aenean euismod diam fermentum tellus pretium, ac fringilla lectus commodo. Nullam non lacus elit. Aenean vitae enim vel tellus auctor eleifend. In vitae viverra elit. Maecenas iaculis libero lectus, vitae euismod est bibendum et. Nam egestas tortor erat, ac sagittis libero tempor et. Mauris nulla ipsum, vulputate non dolor in, sodales congue ligula.
+
+Curabitur dui diam, ornare nec volutpat at, varius auctor mauris. Duis pellentesque dui magna, non tristique dolor ullamcorper at. Aliquam feugiat urna vitae nisl condimentum tempor. Quisque auctor dapibus magna ut maximus. Suspendisse porttitor nibh sit amet leo laoreet auctor. Sed vitae magna ac ipsum hendrerit pharetra vel sit amet arcu. Phasellus porta erat vel urna dignissim vehicula. Quisque tempus risus nec dui sodales condimentum. In sem lacus, facilisis eget auctor ac, sodales quis tortor.
+
+Duis aliquam ornare turpis, ac feugiat dui. Ut quis pharetra metus, sit amet egestas lectus. Aliquam purus purus, porttitor scelerisque euismod ut, pellentesque nec eros. Maecenas eget eros ac mi commodo rhoncus. Aenean maximus dui ut tortor pretium mattis. Ut eleifend arcu id nunc sagittis, quis lacinia nibh malesuada. Integer molestie leo at tortor ullamcorper, id dictum libero pharetra.
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 </body>
 </html>
